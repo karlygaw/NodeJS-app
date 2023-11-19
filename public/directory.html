@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Listing</title>
+</head>
+
+<body>
+    <h1>Directories:</h1>
+    <ul id="directory-list"></ul>
+
+    <script>
+        // Fetch directories from the server
+        fetch('/directory')
+            .then(response => response.json())
+            .then(data => {
+                const directoryList = document.getElementById('directory-list');
+                data.directories.forEach(directory => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = directory;
+                    directoryList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching directory data:', error));
+    </script>
+</body>
+
+</html>

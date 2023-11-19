@@ -1,0 +1,22 @@
+{
+  "name": "node-10-lesson",
+  "version": "1.0.0",
+  "description": "Node JS 10 lesson",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Qarlygash Ussen <karlygash.ussen@narxoz.kz>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
